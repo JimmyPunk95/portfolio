@@ -1,0 +1,809 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/*SECCION MENU */
+*{
+    box-sizing: border-box;
+    font-family: 'Ubuntu';
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.menu{
+    background: gray;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.menu header{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.menu header .logo a{
+    font-family: 'Bebas Neue';
+    font-size: 36px;
+    color: aqua;
+    text-decoration: none;
+}
+
+.menu header ul{
+    display: flex;
+    list-style: none;
+}
+
+.menu header nav ul li a{
+    text-align: none;
+    color: aqua;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.menu header nav ul li a:hover{
+    color: black;
+}
+
+.nav-responsive{
+    background-color: rgb(43, 39, 39);
+    color: aqua;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+/*SECCION INICIO*/
+.inicio{
+    background-image: url(img/pc.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.inicio .contenido-banner{
+    padding: 20px;
+    background-color: black;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.inicio .contenido-banner img{
+    margin-top: 40px;
+    border: 5px solid white;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.inicio .contenido-banner h1{
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: 'Bebas Neue';
+}
+
+.inicio .contenido-banner h2{
+    font-size: 15px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.inicio .contenido-banner .redes a{
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 20px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.inicio .contenido-banner .redes a:hover{
+    background-color: gray;
+}
+
+/*SECCION SOBERE MI*/
+.sobremi{
+    background-color: black;
+    color: white;
+    padding: 50px 20px;
+}
+
+.sobremi .contenido{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.sobremi h2{
+    font-size: 48px;
+    font-family: 'Bebas Neue';
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.sobremi .contenido p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.sobremi .contenido p span{
+    color: gray;
+    font-weight: bold;
+}
+
+.sobremi .fila{
+    display: flex;
+}
+
+.sobremi .fila .col{
+    width: 50%;
+}
+
+.sobremi .fila .col h3{
+    font-size: 28px;
+    font-family: 'Ubuntu';
+    margin-bottom: 15px;
+}
+
+.sobremi .fila .col ul{
+    list-style: none;
+}
+
+.sobremi .fila .col ul li{
+    margin: 12px;
+}
+
+.sobremi .fila .col ul li strong{
+    display: inline-block;
+    color: gray;
+    width: 130px;
+}
+
+.sobremi .fila .col .contenedor-interes{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sobremi .fila .col .contenedor-interes .interes{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(43, 39, 39);
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.sobremi .fila .col .contenedor-interes .interes:hover{
+    background-color: gray;
+}
+
+.sobremi .fila .col .contenedor-interes .interes i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.sobremi button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid white;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    position: relative;
+    z-index: 10;
+}
+
+.sobremi button a{
+    color: white;
+    text-decoration: none;
+}
+
+.sobremi button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: gray;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.sobremi button:hover .overlay{
+    width: 100%;
+}
+
+/*SECCION HABILIDADES*/
+.habilidades{
+    background-color: rgb(43, 39, 39);
+    color: white;
+    padding: 50px 20px;
+}
+
+.habilidades .contenido{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.habilidades h2{
+    font-size: 48px;
+    font-family: 'Bebas Neue';
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.habilidades .fila{
+    display: flex;
+}
+
+.habilidades .fila .col{
+    width: 50%;
+    padding: 0 20px;
+}
+
+.habilidades .fila .col h3{
+    font-size: 28px;
+    font-family: 'Ubuntu';
+    margin-bottom: 15px;
+}
+.habilidades .habilidad > span{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.habilidades .habilidad .barra{
+    height: 8px;
+    width: 80%;
+    background-color: black;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.habilidades .habilidad .progreso{
+    background-color: gold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+}
+
+.habilidades .habilidad .barra span{
+    position: absolute;
+    height: 25px;
+    font-weight: 30px;
+    background-color: gold;
+    color: black;
+    border-color: black 2px;
+    border-radius: 20px;
+    line-height: 25px;
+    text-align: center;
+    top: -10px;
+    right: -15px;
+    font-size: 12px;
+}
+
+.habilidades .habilidad .html{
+    width: 0%;
+    animation: 2s html forwards;
+}
+@keyframes html{
+    0%{width: 0%;}
+    100%{width: 80%;}
+}
+
+.habilidades .habilidad .css{
+    width: 0%;
+    animation: 2s css forwards;
+}
+@keyframes css{
+    0%{width: 0%;}
+    100%{width: 60%;}
+}
+
+.habilidades .habilidad .javascript{
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+@keyframes javascript{
+    0%{width: 0%;}
+    100%{width: 50%;}
+}
+
+.habilidades .habilidad .php{
+    width: 0%;
+    animation: 2s php forwards;
+}
+@keyframes php{
+    0%{width: 0%;}
+    100%{width: 65%;}
+}
+
+.habilidades .habilidad .java{
+    width: 0%;
+    animation: 2s java forwards;
+}
+@keyframes java{
+    0%{width: 0%;}
+    100%{width: 70%;}
+}
+
+.habilidades .habilidad .mysql{
+    width: 0%;
+    animation: 2s mysql forwards;
+}
+@keyframes mysql{
+    0%{width: 0%;}
+    100%{width: 80%;}
+}
+
+.habilidades .habilidad .comunicacion{
+    width: 0%;
+    animation: 2s comunicacion forwards;
+}
+@keyframes comunicacion{
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+
+.habilidades .habilidad .trabajo{
+    width: 0%;
+    animation: 2s trabajo forwards;
+}
+@keyframes trabajo{
+    0%{width: 0%;}
+    100%{width: 80%;}
+}
+
+.habilidades .habilidad .iniciativa{
+    width: 0%;
+    animation: 2s iniciativa forwards;
+}
+@keyframes iniciativa{
+    0%{width: 0%;}
+    100%{width: 75%;}
+}
+
+.habilidades .habilidad .creatividad{
+    width: 0%;
+    animation: 2s creatividad forwards;
+}
+@keyframes creatividad{
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+
+.habilidades .habilidad .independencia{
+    width: 0%;
+    animation: 2s independencia forwards;
+}
+@keyframes independencia{
+    0%{width: 0%;}
+    100%{width: 99%;}
+}
+
+.habilidades .habilidad .empatia{
+    width: 0%;
+    animation: 2s empatia forwards;
+}
+@keyframes empatia{
+    0%{width: 0%;}
+    100%{width: 95%;}
+}
+
+/*SECCION CV*/
+.cv{
+    background-color: black;
+    color: white;
+    padding: 50px 20px;
+}
+
+.cv .contenido{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.cv h2{
+    font-size: 48px;
+    font-family: 'Bebas Neue';
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.cv .fila{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cv .fila .col{
+    width: 49%;
+    padding: 0 20px;
+}
+
+.cv .fila .col h3{
+    font-size: 28px;
+    font-family: 'Ubuntu';
+    margin-bottom: 15px;
+}
+
+.cv .fila .izquierda{
+    border-right: 2px solid gray;
+}
+
+.cv .fila .derecha{
+    border-left: 2px solid gray;
+}
+
+.cv .fila .item{
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: rgb(43, 39, 39);
+    position: relative;
+}
+
+.cv .fila .item h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.cv .fila .item .uni{
+    color: gray;
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+}
+
+.cv .fila .item .fecha{
+    display: block;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.cv .fila .item p{
+    line-height: 24px;
+}
+
+.cv .fila .izq{
+    border-right: 2px solid gray;
+    margin-right: 20px;
+}
+
+.cv .fila .der{
+    border-left: 2px solid gray;
+    margin-left: 20px;
+}
+
+.cv .fila .item .conectori{
+    height: 2px;
+    background-color: gray;
+    width: 42px;
+    position: absolute;
+    top: 50%;
+    right: -42px;
+}
+
+.cv .fila .item .conectori .circuloi{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    right: -38px;
+    position: relative;
+    bottom: 4px;
+}
+
+.cv .fila .item .conectord{
+    height: 2px;
+    background-color: gray;
+    width: 42px;
+    position: absolute;
+    top: 50%;
+    left: -42px;
+}
+
+.cv .fila .item .conectord .circulod{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    left: -6px;
+    position: relative;
+    bottom: 4px;
+}
+
+/*SECCCION PROYECTOS*/
+.proyectos{
+    background-color: rgb(43, 39, 39);
+    color: white;
+    padding: 50px 20px;
+}
+
+.proyectos .contenido{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.proyectos .contenido h2{
+    font-size: 48px;
+    font-family: 'Bebas Neue';
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.proyectos .galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.proyectos .galeria .proyecto{
+    position: relative;
+    max-width: 340px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.proyectos .galeria .proyecto img{
+    width: 100%;
+    display: block;
+}
+
+.proyectos .galeria .proyecto .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+}
+
+.proyectos .galeria .proyecto .overlay a{
+    text-decoration: none;
+    color: white;
+}
+
+.proyectos .galeria .proyecto .overlay h3{
+    transition: 1s;
+}
+.proyectos .galeria .proyecto .overlay h3:hover{
+    color: gold;
+}
+
+.proyectos .galeria .proyecto .overlay:hover{
+    opacity: .5;
+}
+
+/*SECCION CONTACTO*/
+.contacto{
+    background-color: black;
+    color: white;
+    padding: 60px 0;
+}
+
+.contacto .contenido{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.contacto .contenido h2{
+    font-size: 48px;
+    font-family: 'Bebas Neue';
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.contacto .fila{
+    display: flex;
+}
+
+.contacto .fila .col{
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+
+.contacto .fila .col input, .contacto .fila .col textarea{
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: rgb(43, 39, 39);
+    color: white;
+    font-size: 12px;
+}
+
+.contacto button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid white;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+.contacto button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: gray;
+    z-index: -1;
+    transition: 0.2s;
+}
+
+.contacto button:hover .overlay{
+    width: 100%;
+}
+
+.contacto .col .info{
+    position: absolute;
+    top: 0%;
+}
+
+.contacto .col .mapa{
+    height: 100%;
+    width: 100%;
+}
+
+footer{
+    background-color: gray;
+    color: white;
+    padding: 20px 0 10px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+footer .redes{
+    margin-bottom: 20px;   
+}
+
+footer .redes a{
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 20px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+footer .redes a:hover{
+    background-color: rgb(43, 39, 39);
+}
+
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(43, 39, 39);
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -20%;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 77px;
+        background-color: rgb(43, 39, 39);
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid white;
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width:700px){
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .col{
+        width: fit-content;
+    }
+
+    .habilidades .fila{
+        display: block;
+    }
+    .habilidades .fila .col{
+        width: 100%;
+    }
+    .habilidades .fila .col .barra{
+        width: 100%;
+    }
+
+    .cv .fila{
+        display: block;
+    }
+    .cv .fila .col{
+        width: 90%;
+    }
+    .cv .fila .dererecha{
+        margin-left: 20px;
+    }
+
+    .proyectos .galeria{
+        display: block;
+        width: 100%;
+    }
+    .proyectos .galeria .proyecto{
+        max-width: 100%;
+    }
+    .proyectos .galeria .proyecto img{
+        width: 100%;
+    }
+
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+    }
+    .contacto .col .mapa{
+        display: block;
+        height: 350px;
+    }
+}
