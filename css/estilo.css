@@ -64,7 +64,7 @@ html{
 }
 /*SECCION INICIO*/
 .inicio{
-    background-image: url(img/pc.jpg);
+    background-image: url(../img/pc.jpg);
     background-size: cover;
     height: 100vh;
     color: white;
